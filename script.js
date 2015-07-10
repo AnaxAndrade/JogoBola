@@ -61,7 +61,7 @@ var canvas, ctx, ALTURA, LARGURA, frames = 0,
 			ctx.fillStyle = this.cor;
 			ctx.arc(this.x, this.y, 20, 0, 2 * Math.PI, false);
 			ctx.fill();
-			ctx.stroke();
+			//ctx.stroke();
 		}
 	},
 	obstaculos = {
@@ -75,7 +75,7 @@ var canvas, ctx, ALTURA, LARGURA, frames = 0,
 				x: LARGURA,
 				largura: 50,
 				altura: 25,
-				cor: "#663300" // this.cores[Math.floor(5 * Math.random())]
+				cor: "#727272" 
 			});
 
 			this.tempoInsere = 20 + Math.floor(21 * Math.random());
@@ -115,10 +115,10 @@ var canvas, ctx, ALTURA, LARGURA, frames = 0,
 			for (var i = 0, tamanho = this._obs.length; i < tamanho; i++) {
 				var obs = this._obs[i];
 				ctx.beginPath();
-				ctx.fillStyle = this.cor;
+				ctx.fillStyle = obs.cor;
 				ctx.arc(obs.x, chao.y - obs.altura, 25, obs.altura, 0, 2 * Math.PI);
 				ctx.fill();
-				ctx.stroke();
+				//ctx.stroke();
 			}
 
 		}
@@ -169,7 +169,8 @@ function atualiza() {
 }
 
 function desenha() {
-	ctx.fillStyle = "#50beff";
+	ctx.clearRect(0,0,canvas.width,canvas.height);
+	ctx.fillStyle = "transparent";
 	ctx.fillRect(0, 0, LARGURA, ALTURA);
 
 	/* Placar texto */
