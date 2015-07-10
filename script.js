@@ -1,4 +1,4 @@
- //variaveis do jogo
+//variaveis do jogo
 var canvas, ctx, ALTURA, LARGURA, frames = 0,
 	maxPulos = 100,
 	velocidade = 6,
@@ -12,7 +12,7 @@ var canvas, ctx, ALTURA, LARGURA, frames = 0,
 	chao = {
 		y: 550,
 		altura: 50,
-		cor: "#ffdf70",
+		cor: "#663300", //"#ffdf70",
 		desenha: function() {
 			ctx.fillStyle = this.cor;
 			ctx.fillRect(0, this.y, LARGURA, this.altura);
@@ -75,7 +75,7 @@ var canvas, ctx, ALTURA, LARGURA, frames = 0,
 				x: LARGURA,
 				largura: 50,
 				altura: 25,
-				cor: this.cores[Math.floor(5 * Math.random())]
+				cor: "#663300" // this.cores[Math.floor(5 * Math.random())]
 			});
 
 			this.tempoInsere = 20 + Math.floor(21 * Math.random());

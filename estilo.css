@@ -4,6 +4,7 @@ body{
 }
 
 canvas {
+	background: url('paisagem.png');
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
